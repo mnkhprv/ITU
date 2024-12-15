@@ -12,7 +12,7 @@
         <ul>
           <li><a href="bod1.html">Бодлого 1</a></li>
           <li><a href="bod2.html">Бодлого 2</a></li>
-          <li><a href="bod3.html">Бодлого 3</a></li>
+          <li style="background-color: rgb(255, 61, 93);"><a href="bod3.html">Бодлого 3</a></li>
           <li><a href="bod4.html">Бодлого 4</a></li>
           <li><a href="bod5.html">Бодлого 5</a></li>
         </ul>
@@ -24,7 +24,7 @@
       </div>
       <div>
         <label for="toot">Тоот: </label>
-        <input type="number" id="toot" placeholder="тоот оруулна уу">
+        <input type="numbers" id="toot" placeholder="тоот оруулна уу">
         <button onclick="bairnii_too_oloh()">Шалгая</button>
       </div>
       <div id="output" class="output"></div>
@@ -58,13 +58,15 @@
       const davharail = 4;
       const tootInput = document.getElementById('toot');
       const toot = parseFloat(tootInput.value);
-      const result = bairnii_too(floor, orts, davharail, toot);
-      var output = document.getElementById('output');
-      output.textContent = `Entrance: ${result.orts}, Floor: ${result.davhar}, Apartment: ${result.toot}`;
+      if (toot >= 109 || toot <= 0) {
+        var output = document.getElementById('output');
+        output.textContent = "Алдаа: Та 1-ээс 108-ийн хооронд тоо оруулна уу!";
+      }else{
+        const result = bairnii_too(floor, orts, davharail, toot);
+        var output = document.getElementById('output');
+        output.textContent = `Орц: ${result.orts}, Давхар: ${result.davhar}, Тоот: ${result.toot}`;
+        }
       }
-
-  
- 
       </script>
   </body>
 </html>
