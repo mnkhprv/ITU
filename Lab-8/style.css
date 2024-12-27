@@ -1,127 +1,46 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: pink;
-    color: #333;
-    padding: 20px;
-  }
-  
-  header {
-    background-color: skyblue;
-    width: auto;
-    padding: 10px;  
-    border-radius: 8px;
-
-  }
-  
-  header nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    text-align: center;
-  }
-  
-  header nav ul li {
-    width: 100%;
-    margin: 0;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  header nav ul li a {
-    color: navy;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-  }
-  
-  header nav ul li:hover {
-    background-color: rgb(255, 61, 93);
-    border-radius: 8px;
-
-  }
-  
- 
-  main {
-    margin-top: 20px;
-    max-height: 100%;
-    background: #2be9b9;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .question {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  label {
-    font-size: 16px;
-    margin-right: 10px;
-  }
-  
-
-  input[type="numbers"] {
-    padding: 8px;
-    font-size: 16px;
-    border: 5px;
-    border: 1px solid #2be9b9;;
-    border-radius: 8px;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    max-width: 100%;
-    text-decoration: none;
+body {
+  background-color: rgb(255, 255, 255);
 }
-  
-  button {
-    background-color: #a7288c;
-    color: white;
-    border: 2px solid #a7288c;     
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-  }
-  
-  button:hover {
-    background-color: #a83e91;
-  }
-  
-  .output {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #2028a1;
-  }
-  
-  @media screen and (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    header nav ul li {
-        margin: 5px;
-    }
-    header nav ul li a {
-        padding: 8p;
-    }
+ul {
+  text-decoration: none;
+  width: 100%;
+  height: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
 
-    header {
-        padding: 15px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    header nav ul li a {
-        padding: 6px;
-    }
+ul li {
+  height: auto;
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(4, 20, 50);
+  border-radius: 5px;
+  text-align: center;
+  transition: padding 2s;
+}
+
+ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+ul :hover{
+  color: #ffffff;
+  text-decoration: none;
+  background-color: blue;
+  padding: 30px;
+}
+
+main{
+  background: rgb(1, 100, 187);
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px 40px;
 }
